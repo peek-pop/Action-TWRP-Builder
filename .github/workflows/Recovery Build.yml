@@ -14,11 +14,11 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/peek-pop/twrp_device_samsung_a03s'
+        default: 'https://github.com/peek-pop/twrp_device_samsung_a03s-1.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'android-12.1'
+        default: 'master'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -126,6 +126,7 @@ jobs:
         && github.event.inputs.COMMON_PATH != null
       run: |
         git clone ${{ github.event.inputs.COMMON_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.COMMON_PATH }}
+        chmod +x device/samsung/a03s/mkbootimg
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Check Build Tree
