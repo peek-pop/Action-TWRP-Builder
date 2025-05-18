@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/peek-pop/twrp_device_samsung_a03s.git'
+        default: 'https://github.com/peek-pop/twrp_device_samsung_a03ss.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -117,7 +117,6 @@ jobs:
     - name: Clone device tree
       run: |
         git clone ${{ github.event.inputs.DEVICE_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }} 
-        chmod +x device/samsung/a03s/mkbootimg
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Clone common tree
