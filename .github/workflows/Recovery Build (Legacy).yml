@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/peek-pop/twrp_device_samsung_a03ss.git'
+        default: 'https://github.com/peek-pop/twrp_device_samsung_a03s.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
