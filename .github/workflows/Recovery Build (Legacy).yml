@@ -1,4 +1,4 @@
-name: Recovery Build
+name: Twrp Recovery project
 
 on:
   workflow_dispatch:
